@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col s12">
+    <cook-shopping-edit></cook-shopping-edit>
+    <hr>
+    <ul class="collection" *ngFor="let ingredient of ingredients">
+      <li class="collection-item avatar">
+        <cook-ingredient [theIngredient]="ingredient"></cook-ingredient>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col m6">
+      <cook-recipe-list></cook-recipe-list>
+    </div>
+    <div class="col m6">
+      <cook-recipe-details [recipeModel]="currentRecipe" *ngIf="currentRecipe; else infoText"></cook-recipe-details>
+      <ng-template #infoText>
+        <p>
+          Please select a recipe
+        </p>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<cook-header (displayRecipeApp)="onNavigate($event)"></cook-header>
+<div class="container" style="margin-top: 1em">
+    <cook-recipes *ngIf="displayRecipes"></cook-recipes>
+    <cook-shopping-list *ngIf="!displayRecipes"></cook-shopping-list>
+</div>

@@ -1,0 +1,10 @@
+<div class="card col s4" style="margin-right: .5em">
+  <div class="card-image">
+    <img [src]="recipe.imagePath">
+    <span class="card-title">{{ recipe.name }}</span>
+    <a class="btn-floating halfway-fab waves-effect waves-light red" (click)="onSelect()"><i class="material-icons">search</i></a>
+  </div>
+  <div class="card-content">
+    <p>{{ recipe.description }}</p>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col s12">
+    <h3>{{ recipeModel.name }}</h3>
+    <span><img src="{{recipeModel.imagePath}}"></span>
+    <h4>{{ recipeModel.description }}</h4>
+    <div class="input-field col s8">
+      <select name="recipeOption" materialize="material_select" [materializeSelectOptions]="selectOptions"
+              [attr.disabled]="isDisabled?true:null" #recipeOptionInput>
+        <option value="" disabled selected>Manage Recipe</option>
+        <option value="1">Add to shopping list</option>
+        <option value="2">Edit Recipe</option>
+        <option value="3">Delete Recipe</option>
+      </select>
+    </div>
+    <div class="center-align col s4">
+      <button class="btn btn-large" style="margin-bottom: 1em" (click)="manageRecipe()">Submit</button>
+    </div>
+    <div class="col s12">
+      <ul class="collection">
+        <li class="collection-item avatar" *ngFor="let ingredient of recipeModel.ingredients">
+          <h3 class="dynamic-color">
+            {{ ingredient.name }}
+          <span style="font-size: small; font-weight: 700" class="center-align">{{ ingredient.amount }}</span>
+          </h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

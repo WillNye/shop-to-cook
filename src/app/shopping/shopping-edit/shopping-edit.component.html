@@ -1,0 +1,29 @@
+<div class="row">
+  <form class="col s12 container z-depth-3">
+    <div class="row" style="margin-top: 1em">
+      <h4 class="center-align">Ingredient Management</h4>
+      <br>
+      <div class="input-field col s4">
+        <input placeholder="Ingredient" id="name" type="text" class="validate" #nameInput>
+        <label for="name">Name</label>
+      </div>
+      <div class="range-field col s3">
+        <label for="amount">Amount</label>
+        <input type="range" id="amount" min="1" max="20" value="1" #amountInput/>
+      </div>
+      <div class="input-field col s5">
+        <select name="ingredientOption" materialize="material_select" [materializeSelectOptions]="selectOptions" [attr.disabled]="isDisabled?true:null" #optionInput>
+          <option value="" disabled selected>What would you like to do</option>
+          <option value="1">Add</option>
+          <option value="2">Delete</option>
+          <option value="3">Clear</option>
+        </select>
+        <label>Ingredient Options</label>
+      </div>
+    </div>
+    <div class="center-align">
+      <button class="btn btn-large" style="margin-bottom: 1em" (click)="updateShoppingList()">Submit</button>
+    </div>
+  </form>
+</div>
+

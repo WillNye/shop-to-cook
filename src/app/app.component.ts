@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cook works!';
+  displayRecipes: boolean;
+
+  onNavigate(displayRecipe: boolean) {
+    this.displayRecipes = displayRecipe;
+  }
 }
